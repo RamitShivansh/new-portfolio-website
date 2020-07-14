@@ -172,7 +172,7 @@ body {
     width: 20px;
     border-radius: 10px;
     overflow: hidden;
-    transition: all 0.2s ease-in;
+    transition: all 0.25s ease-in;
     color: #FFF;
     margin: 1rem;
 }
@@ -257,7 +257,7 @@ body {
 }
 
 #T {
-    margin-right: 0.25rem;
+    margin-right: 0.5rem;
 }
 #A2 {
     margin-left: -0.3rem;
@@ -300,10 +300,6 @@ body {
     align-items: center;
     justify-content: center;
 }
-.nav-button::after {
-    margin: 1rem auto;
-}
-
 
 .nav-button img {
     height: 15px;
@@ -321,6 +317,54 @@ body {
     color: #212121;
     border: 0.05rem solid #000;
 }
+
+.nav-layover {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    top: inherit;
+    transform: translateY(-50%);
+    left: inherit;
+    width: 100vw;
+    height: 100vh;
+    color: #FFF;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease-in-out;
+}
+
+.nav-layover h1 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+#home:hover ~ #home-overlay {
+    opacity: 1;
+    /* pointer-events: none; */
+}
+#about:hover ~ #about-overlay {
+    opacity: 1;
+    /* pointer-events: none; */
+}
+#projects:hover ~ #projects-overlay {
+    opacity: 1;
+    /* pointer-events: none; */
+}
+#skills:hover ~ #skills-overlay {
+    opacity: 1;
+    /* pointer-events: none; */
+}
+#contact:hover ~ #contact-overlay {
+    opacity: 1;
+    /* pointer-events: none; */
+}
+
+
+
 
 
 
